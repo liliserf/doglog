@@ -1,5 +1,8 @@
 <h1>MY DOGS!</h1>
 
 <% @dogs.each do |dog| %>
-  <h3><%= dog.name.titleize %></h3>
+  <p><%= link_to dog.name.titleize, dog_path(dog) %> 
+    <%= link_to "(Edit)", edit_dog_path(dog)%>
+    <%= link_to "View log", dog_logs_path(dog)%>
+  </p>
 <% end %>

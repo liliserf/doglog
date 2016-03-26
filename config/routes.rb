@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  
   resources :dogs do
-    resources :walks
+    resources :logs do
+      resources :walks
+      resources :meals
+    end
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
